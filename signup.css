@@ -1,0 +1,132 @@
+/* ─── Reuse all shared styles from login.css via @import ─────────────── */
+/* NOTE: signup.css extends login.css. All base variables and shared
+   component styles live in login.css; only signup-specific styles here. */
+
+@import url("login.css");
+
+/* ─── Allow scrolling on signup (more fields than login) ─────────────── */
+body {
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+.auth-form-panel {
+  align-items: flex-start;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* ─── Signup-specific Brand Panel tweaks ─────────────────────────────── */
+.auth-brand-panel .brand-headline { font-size: 1.9rem; }
+
+/* Perk List */
+.brand-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.perk-icon {
+  width: 40px; height: 40px;
+  flex-shrink: 0;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .95rem;
+  color: var(--accent);
+  backdrop-filter: blur(8px);
+}
+
+.perk-title {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: .1rem;
+}
+.perk-desc {
+  font-size: .78rem;
+  color: rgba(255,255,255,.5);
+  line-height: 1.4;
+}
+
+/* ─── Name Row (two columns) ──────────────────────────────────────────── */
+.name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .8rem;
+}
+
+/* ─── Password Strength Bar ───────────────────────────────────────────── */
+.strength-bar-container {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  margin-top: .4rem;
+}
+.strength-bar {
+  flex: 1;
+  height: 5px;
+  background: var(--gray-200);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.strength-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  transition: width .4s ease, background .4s ease;
+}
+.strength-label {
+  font-size: .72rem;
+  font-weight: 600;
+  min-width: 50px;
+  text-align: right;
+}
+
+/* Strength level classes */
+.strength-fill.weak   { width: 25%; background: #EF4444; }
+.strength-fill.fair   { width: 50%; background: #F59E0B; }
+.strength-fill.good   { width: 75%; background: #3B82F6; }
+.strength-fill.strong { width: 100%; background: #22C55E; }
+
+/* ─── Terms Row ───────────────────────────────────────────────────────── */
+.terms-row {
+  margin-bottom: 1.2rem;
+}
+.terms-label {
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  font-size: .83rem;
+  color: var(--gray-600);
+  cursor: pointer;
+  line-height: 1.5;
+}
+.terms-label input[type="checkbox"] {
+  margin-top: .2rem;
+  accent-color: var(--primary);
+  width: 15px; height: 15px;
+  flex-shrink: 0;
+}
+.terms-link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+.terms-link:hover { text-decoration: underline; }
+
+/* ─── Compact field spacing for signup (more fields) ─────────────────── */
+.form-card .field-group { margin-bottom: .9rem; }
+
+/* ─── Responsive: stack name row on very small screens ───────────────── */
+@media (max-width: 380px) {
+  .name-row { grid-template-columns: 1fr; }
+}

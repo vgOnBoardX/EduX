@@ -1,0 +1,253 @@
+/* ============================================================
+   EduX — About Page Professional Stylesheet
+   ============================================================ */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+/* ── Hero Banner ──────────────────────────────────────────── */
+#banner {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url("ASSETS/IMAGES/education (2).jpg");
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#about {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #fff;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+.banner-sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    margin-top: 0.8rem;
+    font-weight: 400;
+}
+
+/* ── About / Who We Are ───────────────────────────────────── */
+.about-intro-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.about-intro-section h1 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+}
+
+.about-intro-section p {
+    font-size: 0.97rem;
+    color: #475569;
+    line-height: 1.8;
+    max-width: 700px;
+}
+
+/* ── Blog Feature Card ────────────────────────────────────── */
+#card1 {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url("ASSETS/IMAGES/Ai Icon.jpg");
+    height: 100%;
+    min-height: 320px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    border: none;
+    overflow: hidden;
+}
+
+#card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    min-height: 320px;
+    padding: 2rem;
+}
+
+#blog-btn {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 999px;
+    align-self: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+#card-body h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+#card-link {
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.2s ease;
+}
+#card-link:hover { gap: 14px; }
+
+/* ── Solutions Section ────────────────────────────────────── */
+.solutions-section {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.solutions-section h1 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.solution-card {
+    background: #fff;
+    border: 1px solid #e8edf5;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    height: 100%;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.solution-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(96,123,169,0.15);
+    border-color: #bfdbfe;
+}
+
+.solution-icon {
+    font-size: 3rem;
+    color: #607ba9;
+    margin-bottom: 1.2rem;
+    display: block;
+}
+
+.solution-card h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.solution-card p {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+}
+
+.solution-card a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0d6efd;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s ease;
+}
+.solution-card a:hover { gap: 10px; }
+
+/* ── Carousel Section ─────────────────────────────────────── */
+.carousel-section {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.carousel-heading {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #0ea5e9;
+    margin-bottom: 2.5rem;
+    text-shadow: none;
+}
+
+.carousel-item img {
+    height: 68vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-inner {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* ── Topics / Cards Section ───────────────────────────────── */
+.topics-section {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.topics-section h1 {
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 800;
+    color: #0f172a;
+    text-align: center;
+    letter-spacing: -0.5px;
+    margin-bottom: 2.5rem;
+}
+
+.topic-card {
+    background: #fff;
+    border: 1px solid #e8edf5;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 190px;
+    width: 100%;
+}
+
+.topic-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+    padding: 1rem 1rem 0.5rem;
+}
+
+.topic-card p {
+    font-size: 0.83rem;
+    color: #64748b;
+    padding: 0 1rem 1rem;
+    line-height: 1.65;
+}

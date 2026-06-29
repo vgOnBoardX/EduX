@@ -1,0 +1,187 @@
+/* ============================================================
+   EduX — Contact Page Professional Stylesheet
+   ============================================================ */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+/* ── Contact Hero ─────────────────────────────────────────── */
+.contact-hero {
+    padding: 5rem 0 3rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f7ff, #faf5ff);
+}
+
+.contact-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -1px;
+    margin-bottom: 0.8rem;
+}
+
+.contact-hero p {
+    color: #64748b;
+    font-size: 1.05rem;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* ── Contact Section ──────────────────────────────────────── */
+.contact-section {
+    padding: 4rem 0 6rem;
+    background: #f8fafc;
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+    overflow: hidden;
+    border: 1px solid #e8edf5;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.contact-img-wrap {
+    height: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.contact-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contact-form-wrap {
+    padding: 3.5rem 3rem;
+}
+
+.contact-form-wrap h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.4rem;
+}
+
+.form-subtitle {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 2.2rem;
+}
+
+/* ── Info Cards ───────────────────────────────────────────── */
+.contact-info-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.contact-info-card {
+    background: #f8fafc;
+    border: 1px solid #e8edf5;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(13, 110, 253, 0.1);
+    border-color: #bfdbfe;
+}
+
+.info-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.4rem;
+}
+
+.contact-info-card p {
+    font-size: 0.87rem;
+    color: #64748b;
+}
+
+/* ── Form inputs ──────────────────────────────────────────── */
+.form-floating-label { margin-bottom: 1.2rem; }
+
+.form-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #1e293b;
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form-input:focus {
+    border-color: #0d6efd;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.08);
+}
+
+.form-input::placeholder { color: #94a3b8; }
+
+.form-label-custom {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.02em;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.9rem;
+    background: linear-gradient(135deg, #0d6efd, #4f46e5);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 16px rgba(13, 110, 253, 0.3);
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(13, 110, 253, 0.4);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .contact-img-wrap { min-height: 250px; }
+    .contact-form-wrap { padding: 2rem 1.5rem; }
+}

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses — EduX | Learn Skills Online</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="course.css">
+    <!-- Dark Mode CSS -->
+    <link rel="stylesheet" href="darkmode.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="main-navbar">
+        <div class="container-fluid px-4">
+            <a href="index.html" class="navbar-brand fw-black fs-2">Edu<span class="text-primary">X</span></a>
+            <div class="d-flex align-items-center gap-3 order-lg-last ms-lg-4">
+                <!-- Cart Toggle -->
+                <button id="cart-toggle-btn" class="btn btn-outline-primary btn-sm position-relative" title="View Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">0</span>
+                </button>
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fa-solid fa-moon fs-5"></i>
+                </button>
+                <!-- Mobile Menu Toggler -->
+                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div id="navbarNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto gap-1">
+                    <li class="nav-item"><a href="index.html" class="nav-link fw-semibold">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link fw-semibold">About</a></li>
+                    <li class="nav-item"><a href="course.html" class="nav-link fw-semibold active">Courses</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link fw-semibold">Contact</a></li>
+                </ul>
+                <div id="nav-auth-btns">
+                    <div class="d-grid d-lg-flex gap-2 mt-3 mt-lg-0">
+                        <a class="btn btn-light border-0 rounded px-4 fw-semibold text-dark" href="signup.html">Sign Up</a>
+                        <a class="btn btn-dark border-0 rounded px-4 fw-semibold text-white" href="login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="banner container-fluid d-flex flex-column justify-content-center align-items-center">
+
+        <h1 class="banner-heading text-white fw-normal">Learn, Grow, Conquer</h1>
+        <h3 class="text-white fw-normal">Enroll To Our Courses To Acquire New Skills and Compete in the Market</h3>
+    </div>
+
+    <div class="container-fluid">
+        <!-- Mobile Toggle Button (only visible < md) -->
+        <div class="d-md-none p-3 border-bottom d-flex align-items-center justify-content-between mb-4">
+            <h5 class="m-0 text-primary fw-bold">Browse Courses</h5>
+            <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#courseSidebar">
+                <i class="fa-solid fa-list-ul me-2"></i>Menu
+            </button>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar (Offcanvas on mobile, column on desktop) -->
+            <div class="sidebar offcanvas-md offcanvas-bottom col-md-3 col-lg-2" tabindex="-1" id="courseSidebar" style="height: auto;">
+                <div class="offcanvas-header d-md-none border-bottom">
+                    <h5 class="offcanvas-title text-primary fw-bold">Courses</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#courseSidebar" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body pt-md-4">
+                    <h2 class="pb-4 text-primary text-center d-none d-md-block">Courses</h2>
+                    <div class="d-flex flex-row flex-wrap justify-content-center flex-md-column gap-3 gap-md-0 text-center">
+                        <a href="#robotics" class="fs-6 text-decoration-none px-3 py-2 px-md-0 py-md-0 pb-md-3 border rounded border-md-0 text-primary-emphasis" data-bs-dismiss="offcanvas" data-bs-target="#courseSidebar">AI & ROBOTICS</a>
+                        <a href="#ml" class="fs-6 text-decoration-none px-3 py-2 px-md-0 py-md-0 pb-md-3 border rounded border-md-0 text-primary-emphasis" data-bs-dismiss="offcanvas" data-bs-target="#courseSidebar">MACHINE LEARNING</a>
+                        <a href="#g_ai" class="fs-6 text-decoration-none px-3 py-2 px-md-0 py-md-0 pb-md-3 border rounded border-md-0 text-primary-emphasis" data-bs-dismiss="offcanvas" data-bs-target="#courseSidebar">GENERATIVE AI</a>
+                        <a href="#cys" class="fs-6 text-decoration-none px-3 py-2 px-md-0 py-md-0 pb-md-3 border rounded border-md-0 text-primary-emphasis" data-bs-dismiss="offcanvas" data-bs-target="#courseSidebar">CYBERSECURITY</a>
+                        <a href="#html_css" class="fs-6 text-decoration-none px-3 py-2 px-md-0 py-md-0 pb-md-3 border rounded border-md-0 text-primary-emphasis" data-bs-dismiss="offcanvas" data-bs-target="#courseSidebar">HTML & CSS</a>
+                        <a href="#js" class="fs-6 text-decoration-none px-3 py-2 px-md-0 py-md-0 pb-md-3 border rounded border-md-0 text-primary-emphasis" data-bs-dismiss="offcanvas" data-bs-target="#courseSidebar">JAVASCRIPT</a>
+                        <a href="#dm" class="fs-6 text-decoration-none px-3 py-2 px-md-0 py-md-0 pb-md-3 border rounded border-md-0 text-primary-emphasis" data-bs-dismiss="offcanvas" data-bs-target="#courseSidebar">DIGITAL MARKETING</a>
+                        <a href="#dbs" class="fs-6 text-decoration-none px-3 py-2 px-md-0 py-md-0 pb-md-3 border rounded border-md-0 text-primary-emphasis" data-bs-dismiss="offcanvas" data-bs-target="#courseSidebar">DATABASE</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-12 col-md-9 col-lg-10 p-4 ">
+                <div id="robotics" class="row align-items-center pb-3">
+
+                    <!-- Image -->
+                    <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+                        <img src="ASSETS/IMAGES/ai1.jpg" class="img-fluid rounded shadow-lg" alt="AI & Robotics">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="col-12 col-md-7 text-center text-md-start">
+                        <h1 class="mb-3">AI & ROBOTICS</h1>
+
+                        <p>
+                            Artificial Intelligence (AI) and robotics together are transforming the way humans live,
+                            work, and interact with technology. AI enables machines to learn from data, make decisions,
+                            and solve problems intelligently, while robotics provides the physical systems that carry
+                            out these actions in the real world.
+                        </p>
+
+                        <div class="text-center text-md-end">
+                            <button class="btn btn-primary mt-3 enroll-btn"
+                                data-course="AI & Robotics"
+                                data-price="4999"
+                                data-original="7999"
+                                data-lessons="42"
+                                data-duration="6 Weeks"
+                                data-level="Beginner"
+                                data-img="ASSETS/IMAGES/ai1.jpg">Enroll Now</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="ml" class="row align-items-center  pb-3">
+
+                    <!-- Image -->
+                    <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+                        <img src="ASSETS/IMAGES/ML.jpg" class="img-fluid rounded shadow-lg" alt="MACHINE LEARNING">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="col-12 col-md-7 text-center text-md-start">
+                        <h1 class="mb-3">MACHINE LEARNING</h1>
+
+                        <p>
+                            Machine learning is a branch of artificial intelligence that enables computers to learn from
+                            data and improve their performance without being explicitly programmed. It works by
+                            identifying patterns in large datasets and using algorithms to make predictions or decisions
+                            based on those patterns. Machine learning is widely used in applications such as image and
+                            speech recognition, recommendation systems, fraud detection, and medical diagnosis. By
+                            continuously learning from new data, machine learning systems become more accurate and
+                            efficient over time, making them a powerful tool in modern technology.
+                        </p>
+
+                        <div class="text-center text-md-end">
+                            <button class="btn btn-primary mt-3 enroll-btn"
+                                data-course="Machine Learning"
+                                data-price="5499"
+                                data-original="8999"
+                                data-lessons="56"
+                                data-duration="8 Weeks"
+                                data-level="Intermediate"
+                                data-img="ASSETS/IMAGES/ML.jpg">Enroll Now</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="g_ai" class="row align-items-center  pb-3">
+
+                    <!-- Image -->
+                    <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+                        <img src="ASSETS/IMAGES/generative.jpg" class="img-fluid rounded shadow-lg" alt="GENERATIVE AI">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="col-12 col-md-7 text-center text-md-start">
+                        <h1 class="mb-3">GENERATIVE AI</h1>
+
+                        <p>
+                            Generative AI is a branch of artificial intelligence that focuses on creating new content
+                            such as text, images, audio, videos, and code by learning patterns from existing data. It
+                            uses advanced models like neural networks to understand structure, style, and context,
+                            allowing it to generate realistic and meaningful outputs. Generative AI is widely used in
+                            content creation, design, education, entertainment, and software development. By automating
+                            creative and analytical tasks, it enhances productivity and opens new possibilities for
+                            innovation across various industries.
+                        </p>
+
+                        <div class="text-center text-md-end">
+                            <button class="btn btn-primary mt-3 enroll-btn"
+                                data-course="Generative AI"
+                                data-price="5999"
+                                data-original="9499"
+                                data-lessons="38"
+                                data-duration="5 Weeks"
+                                data-level="Intermediate"
+                                data-img="ASSETS/IMAGES/generative.jpg">Enroll Now</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="cys" class="row align-items-center  pb-3">
+
+                    <!-- Image -->
+                    <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+                        <img src="ASSETS/IMAGES/cyber.jpg" class="img-fluid rounded shadow-lg" alt="CYBERSECURITY">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="col-12 col-md-7 text-center text-md-start">
+                        <h1 class="mb-3">CYBERSECURITY</h1>
+
+                        <p>
+                            Cybersecurity is the practice of protecting computer systems, networks, and data from
+                            unauthorized access, cyberattacks, and digital threats. It involves techniques such as
+                            encryption, firewalls, authentication, and regular security monitoring to safeguard
+                            sensitive information. With the rapid growth of the internet and digital services,
+                            cybersecurity has become essential for individuals, organizations, and governments.
+                            Effective cybersecurity helps prevent data breaches, financial losses, and privacy
+                            violations, ensuring the safe and reliable use of technology in everyday life.
+
+                        </p>
+
+                        <div class="text-center text-md-end">
+                            <button class="btn btn-primary mt-3 enroll-btn"
+                                data-course="Cybersecurity"
+                                data-price="4499"
+                                data-original="7499"
+                                data-lessons="48"
+                                data-duration="7 Weeks"
+                                data-level="Beginner"
+                                data-img="ASSETS/IMAGES/cyber.jpg">Enroll Now</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="html_css" class="row align-items-center  pb-3">
+
+                    <!-- Image -->
+                    <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+                        <img src="ASSETS/IMAGES/html.jpg" class="img-fluid rounded shadow-lg" alt="HTML & CSS">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="col-12 col-md-7 text-center text-md-start">
+                        <h1 class="mb-3">HTML & CSS</h1>
+
+                        <p>
+                            HTML and CSS are the fundamental technologies used to create and design web pages. HTML
+                            (HyperText Markup Language) provides the basic structure of a webpage by defining elements
+                            such as headings, paragraphs, images, and links, while CSS (Cascading Style Sheets) controls
+                            the visual appearance, including layout, colors, fonts, and responsiveness. Together, HTML
+                            and CSS allow developers to build well-structured, visually appealing, and user-friendly
+                            websites that work across different devices and screen sizes.
+
+                        </p>
+
+                        <div class="text-center text-md-end">
+                            <button class="btn btn-primary mt-3 enroll-btn"
+                                data-course="HTML & CSS"
+                                data-price="1999"
+                                data-original="3499"
+                                data-lessons="30"
+                                data-duration="4 Weeks"
+                                data-level="Beginner"
+                                data-img="ASSETS/IMAGES/html.jpg">Enroll Now</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="js" class="row align-items-center  pb-3">
+
+                    <!-- Image -->
+                    <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+                        <img src="ASSETS/IMAGES/js.jpg" class="img-fluid rounded shadow-lg" alt="JAVASCRIPT">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="col-12 col-md-7 text-center text-md-start">
+                        <h1 class="mb-3">JAVASCRIPT</h1>
+
+                        <p>
+                            JavaScript is a powerful and widely used programming language that adds interactivity and
+                            dynamic behavior to web pages. It allows developers to create features such as form
+                            validation, animations, dynamic content updates, and interactive user interfaces. JavaScript
+                            runs directly in the browser and works seamlessly with HTML and CSS to build responsive web
+                            applications. With the help of modern frameworks and libraries, JavaScript is also used for
+                            server-side development, mobile apps, and game development, making it a versatile technology
+                            in web development.
+
+                        </p>
+
+                        <div class="text-center text-md-end">
+                            <button class="btn btn-primary mt-3 enroll-btn"
+                                data-course="JavaScript"
+                                data-price="2999"
+                                data-original="4999"
+                                data-lessons="52"
+                                data-duration="6 Weeks"
+                                data-level="Beginner to Intermediate"
+                                data-img="ASSETS/IMAGES/js.jpg">Enroll Now</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="dm" class="row align-items-center  pb-3">
+
+                    <!-- Image -->
+                    <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+                        <img src="ASSETS/IMAGES/DIGITAL MARKETING.jpg" class="img-fluid rounded shadow-lg" alt="DIGITAL MARKETING
+">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="col-12 col-md-7 text-center text-md-start">
+                        <h1 class="mb-3">DIGITAL MARKETING</h1>
+
+                        <p>
+                            Digital marketing is the promotion of products and services using digital platforms such as
+                            websites, search engines, social media, email, and mobile applications. It focuses on
+                            reaching the right audience through strategies like search engine optimization (SEO), social
+                            media marketing, content marketing, and online advertising. Digital marketing allows
+                            businesses to track performance, analyze customer behavior, and improve campaigns in real
+                            time. By leveraging technology and data, it helps organizations increase brand visibility,
+                            engage customers, and drive growth in a competitive digital world.
+
+                        </p>
+
+                        <div class="text-center text-md-end">
+                            <button class="btn btn-primary mt-3 enroll-btn"
+                                data-course="Digital Marketing"
+                                data-price="3499"
+                                data-original="5999"
+                                data-lessons="44"
+                                data-duration="5 Weeks"
+                                data-level="Beginner"
+                                data-img="ASSETS/IMAGES/DIGITAL MARKETING.jpg">Enroll Now</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="dbs" class="row align-items-center  pb-3">
+
+                    <!-- Image -->
+                    <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+                        <img src="ASSETS/IMAGES/DBS.jpg" class="img-fluid rounded shadow-lg" alt="DATABASE">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="col-12 col-md-7 text-center text-md-start">
+                        <h1 class="mb-3">DATABASE</h1>
+
+                        <p>
+                            A database is an organized collection of data that is stored and managed electronically to
+                            allow easy access, retrieval, and modification of information. Databases are used in almost
+                            every application, from banking and education systems to websites and mobile apps. They use
+                            database management systems (DBMS) to ensure data consistency, security, and efficient
+                            storage. By enabling fast data processing and reliable data handling, databases play a
+                            crucial role in modern information systems.
+
+                        </p>
+
+                        <div class="text-center text-md-end">
+                            <button class="btn btn-primary mt-3 enroll-btn"
+                                data-course="Database"
+                                data-price="2499"
+                                data-original="4499"
+                                data-lessons="36"
+                                data-duration="5 Weeks"
+                                data-level="Beginner"
+                                data-img="ASSETS/IMAGES/DBS.jpg">Enroll Now</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="index.html" class="footer-brand">Edu<span>X</span></a>
+                    <p class="footer-tagline">Empowering 2M+ learners with job-ready skills. Learn from the best, grow without limits.</p>
+                </div>
+                <div class="col-md-2 col-6">
+                    <p class="footer-heading">Services</p>
+                    <ul class="footer-links">
+                        <li><a href="course.html">Web Development</a></li>
+                        <li><a href="course.html">Data Science</a></li>
+                        <li><a href="course.html">AI &amp; ML</a></li>
+                        <li><a href="course.html">Cloud Computing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                    <p class="footer-heading">Company</p>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="course.html">Courses</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <p class="footer-heading">Contact Us</p>
+                    <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>info@edux.com</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+91 98765 43210</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Kolkata, West Bengal, India</span></div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 EduX. All rights reserved.</span>
+                <span>Made with ❤️ in India</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <!-- ===== ENROLL MODAL ===== -->
+    <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content enroll-modal-content">
+                <div class="modal-header enroll-modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="enrollModalLabel">Enroll in Course</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <!-- Left: Course Info -->
+                        <div class="col-md-5 enroll-modal-left p-4">
+                            <img id="modal-course-img" src="" alt="Course" class="img-fluid rounded-3 mb-3 w-100" style="object-fit:cover;max-height:160px;">
+                            <h5 id="modal-course-name" class="fw-bold text-primary"></h5>
+                            <div class="d-flex align-items-baseline gap-2 mb-2">
+                                <span id="modal-course-price" class="fs-3 fw-bold text-dark"></span>
+                                <span id="modal-course-original" class="text-muted text-decoration-line-through fs-6"></span>
+                                <span class="badge bg-success">Sale</span>
+                            </div>
+                            <ul class="list-unstyled enroll-feature-list mt-3">
+                                <li><i class="fa-solid fa-book-open text-primary me-2"></i><span id="modal-lessons"></span> Lessons</li>
+                                <li><i class="fa-solid fa-clock text-primary me-2"></i><span id="modal-duration"></span></li>
+                                <li><i class="fa-solid fa-signal text-primary me-2"></i><span id="modal-level"></span></li>
+                                <li><i class="fa-solid fa-certificate text-primary me-2"></i>Certificate of Completion</li>
+                                <li><i class="fa-solid fa-infinity text-primary me-2"></i>Lifetime Access</li>
+                            </ul>
+                        </div>
+                        <!-- Right: Plans -->
+                        <div class="col-md-7 p-4">
+                            <h6 class="fw-semibold mb-3">Choose Your Plan</h6>
+                            <div class="enroll-plan-cards">
+                                <!-- Basic -->
+                                <label class="enroll-plan-card" for="plan-basic">
+                                    <input type="radio" id="plan-basic" name="enrollPlan" value="basic" checked>
+                                    <div class="plan-info">
+                                        <span class="plan-name">Basic</span>
+                                        <span class="plan-desc">Course access only</span>
+                                    </div>
+                                    <span class="plan-price" id="plan-basic-price"></span>
+                                </label>
+                                <!-- Pro -->
+                                <label class="enroll-plan-card" for="plan-pro">
+                                    <input type="radio" id="plan-pro" name="enrollPlan" value="pro">
+                                    <div class="plan-info">
+                                        <span class="plan-name">Pro <span class="badge bg-primary ms-1">Popular</span></span>
+                                        <span class="plan-desc">Course + Certificate + Projects</span>
+                                    </div>
+                                    <span class="plan-price" id="plan-pro-price"></span>
+                                </label>
+                                <!-- Premium -->
+                                <label class="enroll-plan-card" for="plan-premium">
+                                    <input type="radio" id="plan-premium" name="enrollPlan" value="premium">
+                                    <div class="plan-info">
+                                        <span class="plan-name">Premium <span class="badge bg-warning text-dark ms-1">Best</span></span>
+                                        <span class="plan-desc">Pro + 1-on-1 Mentoring</span>
+                                    </div>
+                                    <span class="plan-price" id="plan-premium-price"></span>
+                                </label>
+                            </div>
+                            <!-- Action Buttons -->
+                            <div class="d-grid gap-2 mt-4">
+                                <button id="btn-buy-now" class="btn btn-primary btn-lg fw-semibold">
+                                    <i class="fa-solid fa-bolt me-2"></i>Buy Now
+                                </button>
+                                <button id="btn-add-cart" class="btn btn-outline-primary btn-lg fw-semibold">
+                                    <i class="fa-solid fa-cart-plus me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                            <p class="text-muted small text-center mt-3"><i class="fa-solid fa-shield-halved me-1"></i>30-day money-back guarantee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CART SIDEBAR ===== -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h5 class="fw-bold m-0"><i class="fa-solid fa-cart-shopping me-2"></i>My Cart</h5>
+            <button id="cart-close-btn" class="btn-close"></button>
+        </div>
+        <div id="cart-items-container" class="cart-items-container">
+            <p id="cart-empty-msg" class="text-muted text-center mt-4"><i class="fa-solid fa-box-open fs-2 d-block mb-2"></i>Your cart is empty</p>
+        </div>
+        <div class="cart-sidebar-footer" id="cart-footer" style="display:none;">
+            <div class="d-flex justify-content-between fw-bold mb-3">
+                <span>Total</span><span id="cart-total">₹0</span>
+            </div>
+            <button class="btn btn-primary w-100 fw-semibold"><i class="fa-solid fa-lock me-2"></i>Proceed to Checkout</button>
+            <button id="btn-clear-cart" class="btn btn-outline-danger w-100 mt-2 fw-semibold">Clear Cart</button>
+        </div>
+    </div>
+    <!-- Cart Overlay -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- Toast Notification -->
+    <div id="cart-toast" class="cart-toast" style="display:none;">
+        <i class="fa-solid fa-circle-check text-success me-2"></i>
+        <span id="cart-toast-msg">Added to cart!</span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <script src="darkmode.js"></script>
+    <script src="auth.js"></script>
+    <script src="course.js"></script>
+    <script>updateNavAuth();</script>
+
+</body>
+
+</html>

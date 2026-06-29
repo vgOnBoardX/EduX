@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home — EduX | Learn Skills Online</title>
+    <meta name="description"
+        content="EduX offers 10,000+ online courses to help you grow your career. Join millions of learners today.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <!-- Home CSS -->
+    <link rel="stylesheet" href="home.css">
+    <!-- Dark Mode CSS -->
+    <link rel="stylesheet" href="darkmode.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div id="save" class="container-fluid text-center">
+        <p class="m-0">🎉 Unlock 10,000+ programs for just ₹7,999 — Limited time offer! <a href="course.html">Explore now &rarr;</a></p>
+    </div>
+
+
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="main-navbar">
+        <div class="container-fluid px-4">
+            <a href="index.html" class="navbar-brand fw-black fs-2">Edu<span class="text-primary">X</span></a>
+            <div class="d-flex align-items-center gap-3 order-lg-last ms-lg-4">
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fa-solid fa-moon fs-5"></i>
+                </button>
+                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div id="navbarNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto gap-1">
+                    <li class="nav-item"><a href="index.html" class="nav-link fw-semibold active">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link fw-semibold">About</a></li>
+                    <li class="nav-item"><a href="course.html" class="nav-link fw-semibold">Courses</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link fw-semibold">Contact</a></li>
+                </ul>
+                <div id="nav-auth-btns">
+                    <div class="d-grid d-lg-flex gap-2 mt-3 mt-lg-0">
+                        <a class="btn btn-light border-0 rounded px-4 fw-semibold text-dark" href="signup.html">Sign Up</a>
+                        <a class="btn btn-dark border-0 rounded px-4 fw-semibold text-white" href="login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- ═══════════════════════════════════════════════════
+         HERO SECTION
+    ════════════════════════════════════════════════════════ -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="hero-eyebrow">🚀 India's #1 Learning Platform</span>
+                    <h1 class="hero-title">
+                        Achieve Your Career<br>
+                        Goals with <span>EduX</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Build in-demand skills with 10,000+ expert-led courses. Learn at your own pace, earn recognized certifications, and land your dream job.
+                    </p>
+                    <div class="d-grid d-sm-flex gap-3 mt-4">
+                        <button class="btn btn-primary btn-lg fw-semibold px-4 py-2">Get Started</button>
+                        <button class="btn btn-hero-secondary btn-lg fw-semibold px-4 py-2">View Courses</button>
+                    </div>            
+                    <div class="hero-stats">
+                        <div class="hero-stat-item">
+                            <span class="hero-stat-num">10K+</span>
+                            <span class="hero-stat-label">Courses</span>
+                        </div>
+                        <div class="hero-stat-item">
+                            <span class="hero-stat-num">2M+</span>
+                            <span class="hero-stat-label">Learners</span>
+                        </div>
+                        <div class="hero-stat-item">
+                            <span class="hero-stat-num">98%</span>
+                            <span class="hero-stat-label">Satisfaction</span>
+                        </div>
+                        <div class="hero-stat-item">
+                            <span class="hero-stat-num">500+</span>
+                            <span class="hero-stat-label">Expert Tutors</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-img-wrap">
+                        <img src="ASSETS/IMAGES/image.jpg" alt="Students learning on EduX" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         FEATURES / WHY EDUX
+    ════════════════════════════════════════════════════════ -->
+    <section class="features-section">
+        <div class="container">
+            <span class="section-label d-block text-center">Why Choose EduX</span>
+            <h2 class="section-heading">Invest in Yourself. Grow Without Limits.</h2>
+            <p class="section-sub">Everything you need to go from beginner to job-ready — in one place.</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap feature-icon-blue">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="feature-title">Explore 1,000+ Skills</h3>
+                        <p class="feature-desc">From AI and cloud computing to business management and creative arts — find a course for every goal.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap feature-icon-purple">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <h3 class="feature-title">Earn Real Certificates</h3>
+                        <p class="feature-desc">Get industry-recognized certificates on every course you complete and showcase your skills to employers.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrap feature-icon-amber">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <h3 class="feature-title">Learn from the Best</h3>
+                        <p class="feature-desc">Study with 500+ world-class instructors from India's top companies and global institutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         TESTIMONIALS
+    ════════════════════════════════════════════════════════ -->
+    <section class="testimonials-section">
+        <div class="container">
+            <span class="section-label d-block text-center">Student Stories</span>
+            <h2 class="section-heading">What Our Learners Say</h2>
+            <p class="section-sub">Real results from real people who transformed their careers with EduX.</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">I have a full-time job and 3 kids. EduX gave me the flexibility to keep learning. My subscription motivated me every single day to push further.</p>
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-author">
+                            <img class="images" src="ASSETS/IMAGES/male.jpg" alt="Vashkar Ghosh">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-name">Vashkar Ghosh</span>
+                                <span class="testimonial-role">Software Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">The courses here are incredibly structured. I landed my dream job within 3 months of completing the Data Science track. Absolutely worth every penny!</p>
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-author">
+                            <img class="images" src="ASSETS/IMAGES/female.jpg" alt="Shreya Chakraborty">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-name">Shreya Chakraborty</span>
+                                <span class="testimonial-role">Data Analyst</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">EduX helped me transition from a non-tech background into AI. Instructors are world-class and the community is super supportive throughout.</p>
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                        <div class="testimonial-author">
+                            <img class="images" src="ASSETS/IMAGES/male2.jpg" alt="Amalendu Chakraborty">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-name">Amalendu Chakraborty</span>
+                                <span class="testimonial-role">AI Enthusiast</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">As a working mother, flexibility was key. EduX let me learn at my own pace. I earned two certificates in four months and got a promotion!</p>
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-author">
+                            <img class="images" src="ASSETS/IMAGES/female.jpg" alt="Priya Sharma">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-name">Priya Sharma</span>
+                                <span class="testimonial-role">Marketing Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">Hands-on projects and real-world assignments made all the difference. I built a full portfolio that impressed every recruiter I met at the job fair.</p>
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-author">
+                            <img class="images" src="ASSETS/IMAGES/female.jpg" alt="Ananya Roy">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-name">Ananya Roy</span>
+                                <span class="testimonial-role">UX Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">From beginner to professional — EduX made the journey seamless. Instructors break down complex topics beautifully and support is always there.</p>
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-author">
+                            <img class="images" src="ASSETS/IMAGES/female.jpg" alt="Ritu Bose">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-name">Ritu Bose</span>
+                                <span class="testimonial-role">Business Analyst</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         CTA BANNER
+    ════════════════════════════════════════════════════════ -->
+    <section class="cta-section">
+        <div class="container">
+            <span class="section-label" style="background:rgba(255,255,255,0.15); color:#fff; border-color:rgba(255,255,255,0.3);">Limited Offer</span>
+            <h2>Start Learning Today.<br>Unlock Your Potential.</h2>
+            <p>Join 2 million+ learners. Cancel anytime. No credit card required to start.</p>
+            <a href="course.html" class="btn-cta">Start Free Trial</a>
+            <p class="cta-meta">₹30/month after trial &nbsp;·&nbsp; Cancel anytime</p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         CONTACT SECTION
+    ════════════════════════════════════════════════════════ -->
+    <section class="contact-section">
+        <div class="container">
+            <span class="section-label d-block text-center">Get in Touch</span>
+            <h2 class="text-center fw-bold mb-2" style="font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-0.5px;">We'd Love to Hear From You</h2>
+            <p class="text-center text-secondary mb-5" style="font-size:0.95rem;">Have a question? Our team is happy to assist.</p>
+            <div class="contact-card row g-0">
+                <div class="col-md-5">
+                    <div class="contact-img-wrap">
+                        <img src="ASSETS/IMAGES/CONTACT.jpg" alt="Contact EduX">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="contact-form-wrap">
+                        <h2>Send us a Message</h2>
+                        <p class="form-subtitle">Fill in the form and we'll get back to you within 24 hours.</p>
+
+                        <div id="contact-success" class="alert alert-success d-none mb-3" role="alert">
+                            <i class="fa-solid fa-circle-check me-2"></i>
+                            <strong>Message sent!</strong> We'll get back to you soon.
+                        </div>
+
+                        <form id="contact-form" novalidate>
+                            <div class="form-floating-label">
+                                <label class="form-label-custom" for="contactName">Full Name</label>
+                                <input type="text" class="form-input" id="contactName" placeholder="Your full name">
+                                <span class="text-danger small" id="contactName-error"></span>
+                            </div>
+                            <div class="form-floating-label">
+                                <label class="form-label-custom" for="contactEmail">Email Address</label>
+                                <input type="email" class="form-input" id="contactEmail" placeholder="you@example.com">
+                                <span class="text-danger small" id="contactEmail-error"></span>
+                            </div>
+                            <div class="form-floating-label">
+                                <label class="form-label-custom" for="contactMessage">Message</label>
+                                <textarea class="form-input" id="contactMessage" name="comments" rows="5" placeholder="How can we help you?"></textarea>
+                                <span class="text-danger small" id="contactMessage-error"></span>
+                            </div>
+                            <button type="submit" class="btn-submit">Send Message &rarr;</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         FOOTER
+    ════════════════════════════════════════════════════════ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="index.html" class="footer-brand">Edu<span>X</span></a>
+                    <p class="footer-tagline">Empowering 2M+ learners with job-ready skills. Learn from the best, grow without limits.</p>
+                </div>
+                <div class="col-md-2 col-6">
+                    <p class="footer-heading">Services</p>
+                    <ul class="footer-links">
+                        <li><a href="course.html">Web Development</a></li>
+                        <li><a href="course.html">Data Science</a></li>
+                        <li><a href="course.html">AI &amp; ML</a></li>
+                        <li><a href="course.html">Cloud Computing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                    <p class="footer-heading">Company</p>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="course.html">Courses</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <p class="footer-heading">Contact Us</p>
+                    <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>info@edux.com</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+91 98765 43210</span></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Kolkata, West Bengal, India</span></div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 EduX. All rights reserved.</span>
+                <span>Made with ❤️ in India</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <script src="darkmode.js"></script>
+    <script src="auth.js"></script>
+    <script src="home.js"></script>
+    <script src="contact.js"></script>
+    <script>updateNavAuth();</script>
+
+</body>
+
+</html>
